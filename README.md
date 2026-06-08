@@ -41,10 +41,8 @@ Password: admin123
 3. Configure database username and password in `DBConnection.java`.
 4. Run `Main.java`.
 
-## Screenshots
 
-Add screenshots from the screenshots folder.
 
 ## Author
 
-Your Name
+K Sneha
