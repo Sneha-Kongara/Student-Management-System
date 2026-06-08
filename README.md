@@ -17,8 +17,6 @@ Student Management System is a desktop application developed using Java Swing, J
 ## Technologies Used
 
 * Java
-* Swing
-* JDBC
 * MySQL
 * Eclipse IDE
 
