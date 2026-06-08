@@ -1,0 +1,34 @@
+private void loadTable() {
+setLocationRelativeTo(null);
+loadTable();
+    String columns[] = {
+
+            "ID",
+            "Name",
+            "Course",
+            "Email",
+            "Phone"
+    };
+
+    DefaultTableModel model =
+            new DefaultTableModel(columns,0);
+
+    ArrayList<Student> list =
+            dao.getAllStudents();
+
+    for(Student s : list) {
+
+        Object row[] = {
+
+                s.getId(),
+                s.getName(),
+                s.getCourse(),
+                s.getEmail(),
+                s.getPhone()
+        };
+
+        model.addRow(row);
+    }
+
+    table.setModel(model);
+}
