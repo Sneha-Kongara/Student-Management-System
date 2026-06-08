@@ -1,0 +1,48 @@
+private void updateStudent() {
+
+    try {
+
+        Student student = new Student();
+
+        student.setId(
+                Integer.parseInt(txtId.getText()));
+
+        student.setName(
+                txtName.getText());
+
+        student.setCourse(
+                txtCourse.getText());
+
+        student.setEmail(
+                txtEmail.getText());
+
+        student.setPhone(
+                txtPhone.getText());
+
+        boolean status =
+                dao.updateStudent(student);
+
+        if(status) {
+
+            JOptionPane.showMessageDialog(
+                    this,
+                    "Student Updated Successfully");
+
+            clearFields();
+
+            loadTable();
+
+        } else {
+
+            JOptionPane.showMessageDialog(
+                    this,
+                    "Update Failed");
+        }
+
+    } catch(Exception e) {
+
+        JOptionPane.showMessageDialog(
+                this,
+                e.getMessage());
+    }
+}
